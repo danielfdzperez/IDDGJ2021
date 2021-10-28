@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E127E69B-5A9D-E89D-B210-892D2E932D60}</ProjectGuid>
+    <ProjectGuid>{228697F0-1D71-76C7-D9C4-BAE162B31320}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -53,8 +53,10 @@
     <UnityVersion>2020.3.19f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Player\MovementComponent.cs" />
     <Compile Include="Assets\Scripts\Tasks\InteractableTask.cs" />
+    <Compile Include="Assets\Scripts\Player\MovementComponent.cs" />
+    <Compile Include="Assets\Scripts\Player\AttackBar.cs" />
+    <Compile Include="Assets\Scripts\Player\AttackBar\AttackBarVisuals.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
