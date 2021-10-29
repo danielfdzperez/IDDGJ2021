@@ -5,6 +5,8 @@ using UnityEngine.InputSystem;
 public class AttackBar : MonoBehaviour
 {
 
+    public enum HitType { perfect, nonPerfect, fail}
+
     public float currentValue { get; private set; }
 
     [SerializeField]
@@ -20,14 +22,6 @@ public class AttackBar : MonoBehaviour
     [SerializeField]
     float nonPerfectHitThreshold = 0f;
 
-    [SerializeField]
-    float perfectDamage = 10f;
-
-    [SerializeField]
-    float nonPerfectDamage = 2f;
-
-    [SerializeField]
-    float hitByMiss = 2f;
 
     bool active = false;
 
@@ -42,11 +36,16 @@ public class AttackBar : MonoBehaviour
     public class FloatEvent : UnityEvent<float> { }
 
     [System.Serializable]
+    public class HitTypeEvent : UnityEvent<HitType> { }
+
+    [System.Serializable]
     public class Float4Event : UnityEvent<float, float, float, float> { }
+
+    public Float4Event OnGenerateHitValues;
     public Float4Event OnActivate;
 
-    public FloatEvent OnHit;
-    public FloatEvent OnFail;
+    public HitTypeEvent OnHit;
+    //public HitTypeEvent OnFail;
     public FloatEvent OnUpdatevalue;
 
 
@@ -58,10 +57,13 @@ public class AttackBar : MonoBehaviour
         if (OnActivate == null)
             OnActivate = new Float4Event();
 
+        if (OnGenerateHitValues == null)
+            OnGenerateHitValues = new Float4Event();
+
         if (OnHit == null)
-            OnHit = new FloatEvent();
-        if (OnFail == null)
-            OnFail = new FloatEvent();
+            OnHit = new HitTypeEvent();
+        //if (OnFail == null)
+        //    OnFail = new HitTypeEvent();
         
         if (OnUpdatevalue == null)
             OnUpdatevalue = new FloatEvent();
@@ -83,7 +85,13 @@ public class AttackBar : MonoBehaviour
             currentValue = Mathf.MoveTowards(currentValue, 1, Time.deltaTime * speed);
             OnUpdatevalue.Invoke(currentValue);
             if (currentValue == 1)
-                End();
+            {
+                currentValue = 0;
+                GenerateHitValues();
+                //Mal deberia haber un On
+                
+            }
+                
         }
     }
 
@@ -98,13 +106,15 @@ public class AttackBar : MonoBehaviour
         currentValue = 0f;
         active = true;
         GenerateHitValues();
-        OnActivate.Invoke(perfectHit, perfectHitThreshold,nonPerfectHit,nonPerfectHitThreshold);
+        //OnActivate.Invoke(perfectHit, perfectHitThreshold,nonPerfectHit,nonPerfectHitThreshold);
     }
 
     void GenerateHitValues()
     {
+
         perfectHit = Random.Range(0.1f, 0.5f);
-        nonPerfectHit = Random.Range(perfectHit+perfectHitThreshold, 1-nonPerfectHitThreshold);
+        nonPerfectHit = Random.Range(perfectHit+nonPerfectHitThreshold, 1- nonPerfectHitThreshold);
+        OnGenerateHitValues.Invoke(perfectHit, perfectHitThreshold, nonPerfectHit, nonPerfectHitThreshold);
     }
 
     void Action()
@@ -117,15 +127,15 @@ public class AttackBar : MonoBehaviour
 
         if (Mathf.Abs(currentValue - perfectHit) <= perfectHitThreshold)
         {
-            OnHit.Invoke(perfectDamage);
+            OnHit.Invoke(HitType.perfect);
         }
         else if (Mathf.Abs(currentValue - nonPerfectHit) <= nonPerfectHitThreshold)
         {
-            OnHit.Invoke(nonPerfectDamage);
+            OnHit.Invoke(HitType.nonPerfect);
         }
         else
         {
-            OnFail.Invoke(hitByMiss);
+            OnHit.Invoke(HitType.fail);
         }
 
         End();
