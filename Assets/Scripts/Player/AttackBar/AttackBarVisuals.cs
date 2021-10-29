@@ -15,6 +15,8 @@ public class AttackBarVisuals : MonoBehaviour
     Slider slider;
 
     float x = 0;
+
+    Transform target;
     //AttackBar barLogic;
     // Start is called before the first frame update
     void Start()
@@ -31,12 +33,20 @@ public class AttackBarVisuals : MonoBehaviour
         //i.rectTransform.anchorMax = new Vector2(x, 1);
         //Debug.Log(i.rectTransform.anchoredPosition);
         //i.rectTransform.position = new Vector3(0, i.rectTransform.position.y, i.rectTransform.position.z);
+        if(target)
+            transform.position = target.position;
     }
 
     public void Setup(float perfectHit, float perfectHitThreshold, float nonPerfectHit, float  nonPerfectHitThreshold)
     {
+        slider.gameObject.SetActive(true);
         SetupImage(imagePerfectHit, perfectHit, perfectHitThreshold);
         SetupImage(imageNonPerfectHit, nonPerfectHit, nonPerfectHitThreshold);
+    }
+
+    public void Hide()
+    {
+        slider.gameObject.SetActive(false);
     }
 
     void SetupImage(Image image, float pos, float scale)
@@ -49,6 +59,14 @@ public class AttackBarVisuals : MonoBehaviour
     public void UpdateValue(float value)
     {
         slider.value = value;
+    }
+
+    public void SetTarget(GameObject obj)
+    {
+        if (obj == null)
+            target = null;
+        else
+            target = obj.transform;
     }
 
 }

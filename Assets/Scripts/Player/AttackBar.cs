@@ -2,10 +2,8 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
 
-public class AttackBar : MonoBehaviour
+public partial class AttackBar : MonoBehaviour
 {
-
-    public enum HitType { perfect, nonPerfect, fail}
 
     public float currentValue { get; private set; }
 
@@ -41,8 +39,11 @@ public class AttackBar : MonoBehaviour
     [System.Serializable]
     public class Float4Event : UnityEvent<float, float, float, float> { }
 
+    [System.Serializable]
+    public class GameObjectEvent : UnityEvent<GameObject> { }
+
     public Float4Event OnGenerateHitValues;
-    public Float4Event OnActivate;
+    public GameObjectEvent OnActivate;
 
     public HitTypeEvent OnHit;
     //public HitTypeEvent OnFail;
@@ -55,7 +56,7 @@ public class AttackBar : MonoBehaviour
             OnEnd = new UnityEvent();
 
         if (OnActivate == null)
-            OnActivate = new Float4Event();
+            OnActivate = new GameObjectEvent();
 
         if (OnGenerateHitValues == null)
             OnGenerateHitValues = new Float4Event();
@@ -72,7 +73,7 @@ public class AttackBar : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //End();
     }
 
     // Update is called once per frame
@@ -95,18 +96,17 @@ public class AttackBar : MonoBehaviour
         }
     }
 
-    void End()
+    public void End()
     {
         active = false;
         OnEnd.Invoke();
     }
 
-    void Activate()
+    public void Activate()
     {
         currentValue = 0f;
         active = true;
         GenerateHitValues();
-        //OnActivate.Invoke(perfectHit, perfectHitThreshold,nonPerfectHit,nonPerfectHitThreshold);
     }
 
     void GenerateHitValues()
@@ -138,7 +138,7 @@ public class AttackBar : MonoBehaviour
             OnHit.Invoke(HitType.fail);
         }
 
-        End();
+        //End();
     }
 
     public void PressButton(InputAction.CallbackContext context)
