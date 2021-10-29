@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":true,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":1279.714599609375,"y":591.4312744140625,"z":-468.61474609375},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":686.2244873046875,"orthographic":true}
+=======
+﻿{"cameraMode":{"drawMode":0,"name":"Shaded","section":"Shading Mode"},"sceneLighting":true,"audioPlay":false,"sceneViewState":{"m_AlwaysRefresh":true,"showFog":true,"showSkybox":true,"showFlares":true,"showImageEffects":true,"showParticleSystems":true,"showVisualEffectGraphs":true,"m_FxEnabled":true},"in2DMode":true,"pivot":{"x":-5.730043888092041,"y":1.3320090770721436,"z":-11.790775299072266},"rotation":{"x":0.0,"y":0.0,"z":0.0,"w":1.0},"size":3.025333881378174,"orthographic":true}
+>>>>>>> parent of 8a6762f... barra de ataque
