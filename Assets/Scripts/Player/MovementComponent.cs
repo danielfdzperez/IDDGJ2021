@@ -13,6 +13,10 @@ public class MovementComponent : MonoBehaviour
 
     Vector2 movement;
     // Start is called before the first frame update
+
+
+    [SerializeField]
+    Animator animator;
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -22,6 +26,9 @@ public class MovementComponent : MonoBehaviour
     void Update()
     {
         rigidbody.MovePosition(rigidbody.position + movement * speed * Time.fixedDeltaTime);
+
+        animator.SetFloat("Horizontal", movement.x);
+        animator.SetFloat("Vertical", movement.y);
     }
 
     public void Move(InputAction.CallbackContext context)

@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: TileAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+    totalSpriteSurfaceArea: 10784
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 5778961287088506303, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -317771678647371661, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -396035294860175646, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: 8642771837104280003, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -6985117363303071740, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -4815885190406460031, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -3627264120405484348, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: 5663061954668274717, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: 3985221016008397036, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: 7477116942032994148, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: 11442893378838041, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -781294158744790408, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -1762573714345474896, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -2426843357703420916, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -3642208251427772964, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -7486092956772349302, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: 6007627129536956325, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: 9061651696941551919, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: -7775419718026629507, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  - {fileID: 8233071653059976297, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - FakeWall
+  - windowDay
+  - tv fixed
+  - sinkClean
+  - sinkDirty
+  - Bed
+  - stairsUp
+  - walltop
+  - pcnight
+  - grandma
+  - TaskMark
+  - woodchair
+  - rug
+  - windowNight
+  - pcDay
+  - stairsDown
+  - wallBottom
+  - table
+  - fridge
+  - tv broken
+  m_RenderDataMap: {}
+  m_Tag: TileAtlas
+  m_IsVariant: 0

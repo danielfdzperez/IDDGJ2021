@@ -1,16 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 public class InteractableTask : MonoBehaviour
 {
     [SerializeField]
     Canvas canvas;
-    [SerializeField]
-    Dialog dialog;
-
-    bool canInteract = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +39,6 @@ public class InteractableTask : MonoBehaviour
         GameObject player = collision.gameObject.GetComponent<MovementComponent>() != null ? collision.gameObject : null;
         if (player)
         {
-            canInteract = true;
             ShowCanvas(true);
         }
     }
@@ -55,16 +49,8 @@ public class InteractableTask : MonoBehaviour
 
         if (player)
         {
-            canInteract = false;
             ShowCanvas(false);
         }
     }
 
-    public void Interact(InputAction.CallbackContext context)
-    {
-        if (context.phase == InputActionPhase.Started && canInteract)
-        {
-            dialog.Activate();
-        }
-    }
 }
