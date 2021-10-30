@@ -19,10 +19,13 @@ public class Boss : MonoBehaviour, HittableInterface
     public class FloatEvent : UnityEvent<float> { }
 
     public FloatEvent OnHit;
+    public UnityEvent OnDie;
     private void Start()
     {
         if (OnHit == null)
             OnHit = new FloatEvent();
+        if (OnDie == null)
+            OnDie = new UnityEvent();
     }
 
     //private void OnTriggerEnter2D(Collider2D collision)
@@ -46,6 +49,14 @@ public class Boss : MonoBehaviour, HittableInterface
                 break;
         }
         currentLife = Mathf.Max(currentLife, 0);
+
         OnHit.Invoke(currentLife);
+        if (currentLife <= 0)
+            Die();
+    }
+
+    void Die()
+    {
+        OnDie.Invoke();
     }
 }
