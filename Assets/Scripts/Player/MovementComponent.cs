@@ -26,7 +26,6 @@ public class MovementComponent : MonoBehaviour
     void Update()
     {
         rigidbody.MovePosition(rigidbody.position + movement * speed * Time.fixedDeltaTime);
-
         animator.SetFloat("Horizontal", movement.x);
         animator.SetFloat("Vertical", movement.y);
     }
