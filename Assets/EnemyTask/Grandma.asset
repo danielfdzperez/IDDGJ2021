@@ -25,8 +25,9 @@ MonoBehaviour:
   sentences:
   - La abuela ya no me reconoce tengo que darle las pastillas para que se acuerde
     de mi
+  - le doy las pastillas?
   winText: 
-  battleTheme: {fileID: 0}
+  battleTheme: {fileID: 8300000, guid: 13e2354aecc5e6348a7bc4064ff430ae, type: 3}
   sfxTalk: {fileID: 8300000, guid: 1d03c975afbf609409fcb6db373404ae, type: 3}
   sfxHurt: {fileID: 8300000, guid: f6df24e6c776a7446a0344488674e505, type: 3}
   fixedArt: {fileID: 0}

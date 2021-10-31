@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Dialog : MonoBehaviour
 {
     [SerializeField]
-    EnemyTask taskDefinition;
+    public EnemyTask taskDefinition;
 
     [SerializeField]
     string[] sentences;

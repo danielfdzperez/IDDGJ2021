@@ -35,4 +35,6 @@ public class TaskManager : MonoBehaviour
     public EnemyTask GetCurrentTask() {
         return currentTask;
     }
+
+
 }
