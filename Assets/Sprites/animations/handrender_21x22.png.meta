@@ -1,0 +1,804 @@
+fileFormatVersion: 2
+guid: cb2d3f95131c402419fa8d49c86c8697
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7158303253307915726
+    second: handrender_21x22_0
+  - first:
+      213: 2178008469810306062
+    second: handrender_21x22_1
+  - first:
+      213: -4473119903037473415
+    second: handrender_21x22_2
+  - first:
+      213: -7892688098485942816
+    second: handrender_21x22_3
+  - first:
+      213: 555958196606437231
+    second: handrender_21x22_4
+  - first:
+      213: 5465330574807002687
+    second: handrender_21x22_5
+  - first:
+      213: 4583629629847066229
+    second: handrender_21x22_6
+  - first:
+      213: -8176080158959634387
+    second: handrender_21x22_7
+  - first:
+      213: 5118694175518974962
+    second: handrender_21x22_8
+  - first:
+      213: -1390377820537733719
+    second: handrender_21x22_9
+  - first:
+      213: -4856227000799148765
+    second: handrender_21x22_10
+  - first:
+      213: -7722356005098496438
+    second: handrender_21x22_11
+  - first:
+      213: 6722117870755401267
+    second: handrender_21x22_12
+  - first:
+      213: -8683445602708443700
+    second: handrender_21x22_13
+  - first:
+      213: 7213001278812097744
+    second: handrender_21x22_14
+  - first:
+      213: 5923753292274759909
+    second: handrender_21x22_15
+  - first:
+      213: -2078278182858465727
+    second: handrender_21x22_16
+  - first:
+      213: -9208497927896433377
+    second: handrender_21x22_17
+  - first:
+      213: -7640002340443095025
+    second: handrender_21x22_18
+  - first:
+      213: 8961955546243597221
+    second: handrender_21x22_19
+  - first:
+      213: -3986210080653245282
+    second: handrender_21x22_20
+  - first:
+      213: -7260770509344885916
+    second: handrender_21x22_21
+  - first:
+      213: -3923216012146576622
+    second: handrender_21x22_22
+  - first:
+      213: 435619272967894701
+    second: handrender_21x22_23
+  - first:
+      213: -7415119383172480031
+    second: handrender_21x22_24
+  - first:
+      213: -6580429065927994139
+    second: handrender_21x22_25
+  - first:
+      213: 479860546323656808
+    second: handrender_21x22_26
+  - first:
+      213: 6504372644812046587
+    second: handrender_21x22_27
+  - first:
+      213: -9058770962869348020
+    second: handrender_21x22_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: handrender_21x22_0
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 120
+        width: 9
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2320f001e1998ac90800000000000000
+      internalID: -7158303253307915726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_1
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 120
+        width: 9
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cd5d8e927d93e10800000000000000
+      internalID: 2178008469810306062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 120
+        width: 9
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97db8b5d5294ce1c0800000000000000
+      internalID: -4473119903037473415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_3
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 120
+        width: 9
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5caceddf9877290800000000000000
+      internalID: -7892688098485942816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_4
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 120
+        width: 9
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6781b2c80927b700800000000000000
+      internalID: 555958196606437231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_5
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 120
+        width: 9
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ee3738331c8db40800000000000000
+      internalID: 5465330574807002687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_6
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 98
+        width: 9
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5765dfcfcd25c9f30800000000000000
+      internalID: 4583629629847066229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_7
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 98
+        width: 9
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2877160a6ab88e80800000000000000
+      internalID: -8176080158959634387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_8
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 98
+        width: 9
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f36bad8b31490740800000000000000
+      internalID: 5118694175518974962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_9
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 98
+        width: 10
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ad344f1db264bce0800000000000000
+      internalID: -1390377820537733719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_10
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 98
+        width: 10
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 325c4bca5473b9cb0800000000000000
+      internalID: -4856227000799148765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_11
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 98
+        width: 10
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4edffec02ea4d490800000000000000
+      internalID: -7722356005098496438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_12
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 76
+        width: 10
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e4ea09692c94d50800000000000000
+      internalID: 6722117870755401267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_13
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 76
+        width: 10
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccda2203b343e7780800000000000000
+      internalID: -8683445602708443700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_14
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 76
+        width: 10
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dc880c627ab91460800000000000000
+      internalID: 7213001278812097744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_15
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 76
+        width: 11
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e87613eb36653250800000000000000
+      internalID: 5923753292274759909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_16
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 75
+        width: 11
+        height: 13
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14ed64ef0097823e0800000000000000
+      internalID: -2078278182858465727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_17
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 75
+        width: 11
+        height: 13
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1dffcc5ce7d43080800000000000000
+      internalID: -9208497927896433377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_18
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 53
+        width: 12
+        height: 13
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f008cbe895249f590800000000000000
+      internalID: -7640002340443095025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_19
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 52
+        width: 13
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a301ba36134f5c70800000000000000
+      internalID: 8961955546243597221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_20
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 52
+        width: 14
+        height: 14
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e94059e2d032ea8c0800000000000000
+      internalID: -3986210080653245282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_21
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 51
+        width: 15
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 463bdd2e0bf8c3b90800000000000000
+      internalID: -7260770509344885916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_22
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 50
+        width: 15
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213f0e2b2dfed89c0800000000000000
+      internalID: -3923216012146576622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_23
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 50
+        width: 16
+        height: 15
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da6b096bb61ab0600800000000000000
+      internalID: 435619272967894701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_24
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 27
+        width: 18
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e304ee3534381990800000000000000
+      internalID: -7415119383172480031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_25
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 26
+        width: 19
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4d4bf01ae9da4a0800000000000000
+      internalID: -6580429065927994139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_26
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 25
+        width: 19
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 860b85ddf9ec8a600800000000000000
+      internalID: 479860546323656808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_27
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 24
+        width: 19
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf04ac4757c244a50800000000000000
+      internalID: 6504372644812046587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: handrender_21x22_28
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 23
+        width: 20
+        height: 16
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c499c800ec7c84280800000000000000
+      internalID: -9058770962869348020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
