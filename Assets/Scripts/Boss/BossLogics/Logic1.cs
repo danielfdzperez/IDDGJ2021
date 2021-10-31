@@ -12,6 +12,9 @@ public class Logic1 : MonoBehaviour, LogicInterface
     [SerializeField]
     Transform maxPos;
 
+    [SerializeField]
+    AudioSource shotAudio;
+
     Coroutine currentState;
     // Start is called before the first frame update
     void Start()
@@ -44,7 +47,7 @@ public class Logic1 : MonoBehaviour, LogicInterface
                 p.bossPosition = transform.position;
                 
             }
-
+            SoundManager.Instance.PlaySFX(shotAudio);
             yield return new WaitForSeconds(1f);
 
             split = Vector2.Distance(minPos.position, maxPos.position) / 10;
@@ -59,6 +62,7 @@ public class Logic1 : MonoBehaviour, LogicInterface
                 Projectile p = projecitle.GetComponent<Projectile>();
                 p.SetDirectionAndSpeed(dir, 5);
                 p.bossPosition = transform.position;
+                SoundManager.Instance.PlaySFX(shotAudio);
                 yield return new WaitForSeconds(0.2f);
             }
             yield return new WaitForSeconds(1f);
