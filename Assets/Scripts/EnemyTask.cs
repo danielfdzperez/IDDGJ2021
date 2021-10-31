@@ -22,4 +22,13 @@ public class EnemyTask : ScriptableObject
     public string attackDescription;
 
     public string defeatedString;
+
+    public string winText;
+
+    public Sprite GetSprite(bool night)
+    {
+        if (night)
+            return nightArt;
+        return dayArt;
+    }
 }

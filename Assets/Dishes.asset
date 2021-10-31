@@ -21,4 +21,5 @@ MonoBehaviour:
   - {fileID: 0}
   attackDamage: 0
   attackDescription: 
-  defeatedString: 
+  defeatedString: Paso de limpiar mas platos
+  winText: Mas limpio que yo estan

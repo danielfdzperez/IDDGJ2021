@@ -44,4 +44,10 @@ public class TimeManagement : MonoBehaviour
 
         return currentTime >= 3;
     }
+
+    public void AddAnHour()
+    {
+        currentTime++;
+        currentTime = Mathf.Min(arrowAngles.Count, currentTime);
+    }
 }

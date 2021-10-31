@@ -23,6 +23,11 @@ public class Projectile : MonoBehaviour, HittableInterface
         rb.gravityScale = 0;
     }
 
+    void Start()
+    {
+        Object.Destroy(gameObject, 5.0f);
+    }
+
     public void ChangeDirection(Vector2 dir)
     {
         dir.Normalize();
@@ -55,10 +60,13 @@ public class Projectile : MonoBehaviour, HittableInterface
             PlayerCombat player = collision.GetComponent<PlayerCombat>();
             if(player)
             {
-                player.Hit(hitType);
+
                 playerCollidersHit++;
-                if(playerCollidersHit == 2)
+                if (playerCollidersHit == 2)
+                {
+                    player.Hit(hitType);
                     DestroyByImpact();
+                }
             }
         }
         //Lo mismo para el player
@@ -77,6 +85,7 @@ public class Projectile : MonoBehaviour, HittableInterface
     {
         this.hitType = hitType;
         ChangeDirection(bossPosition - (Vector2)transform.position);
+        returned = true;
         //Debug.DrawLine((Vector2)transform.position, (Vector2)transform.position + (), Color.yellow, 10);
     }
 

@@ -24,6 +24,7 @@ public class DialogManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        //EndDialog();
     }
 
     // Start is called before the first frame update
@@ -31,7 +32,7 @@ public class DialogManager : MonoBehaviour
     {
         //Comprobar que esta todo
 
-        EndDialog();
+
     }
 
     public void DisplayNewDialog(Dialog dialog)

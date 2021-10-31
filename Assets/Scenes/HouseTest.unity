@@ -250,54 +250,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  volumeTrigger: {fileID: 316477264}
-  volumeLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  stopNaNPropagation: 1
-  finalBlitToCameraTarget: 0
-  antialiasingMode: 0
-  temporalAntialiasing:
-    jitterSpread: 0.75
-    sharpness: 0.25
-    stationaryBlending: 0.95
-    motionBlending: 0.85
-  subpixelMorphologicalAntialiasing:
-    quality: 2
-  fastApproximateAntialiasing:
-    fastMode: 0
-    keepAlpha: 0
-  fog:
-    enabled: 1
-    excludeSkybox: 1
-  debugLayer:
-    lightMeter:
-      width: 512
-      height: 256
-      showCurves: 1
-    histogram:
-      width: 512
-      height: 256
-      channel: 3
-    waveform:
-      exposure: 0.12
-      height: 256
-    vectorscope:
-      size: 256
-      exposure: 0.12
-    overlaySettings:
-      linearDepth: 0
-      motionColorIntensity: 4
-      motionGridSize: 64
-      colorBlindnessType: 0
-      colorBlindnessStrength: 1
-  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
-  m_ShowToolkit: 0
-  m_ShowCustomSorter: 0
-  breakBeforeColorGrading: 0
-  m_BeforeTransparentBundles: []
-  m_BeforeStackBundles: []
-  m_AfterStackBundles: []
 --- !u!1 &328294460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2318,7 +2270,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc9568953bd14be4bbe98556ba70e8c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentTime: 3
+  currentTime: 0
 --- !u!4 &1738282252
 Transform:
   m_ObjectHideFlags: 0
@@ -2463,6 +2415,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 446942717327976441, guid: 076704d66bd258d478179c4b1de68e13, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 17.430054
+      objectReference: {fileID: 0}
+    - target: {fileID: 446942717327976441, guid: 076704d66bd258d478179c4b1de68e13, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -59.429993
+      objectReference: {fileID: 0}
     - target: {fileID: 446942718927556472, guid: 076704d66bd258d478179c4b1de68e13, type: 3}
       propertyPath: m_Name
       value: NonTaskUI

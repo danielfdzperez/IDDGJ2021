@@ -13,12 +13,20 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
     [Range(0,1)]
     float damageByMissOrHit = 0.1f;
 
-    float life = 1;
+    float health = 1;
 
     bool died = false;
 
+    [SerializeField]
+    GameObject weapon;
+    Coroutine weaponAnim;
+
     [System.Serializable]
     public class GameObjectEvent : UnityEvent<GameObject> { }
+    [System.Serializable]
+    public class FloatEvent : UnityEvent<float> { }
+
+
 
     [Header("Events")]
     [Space]
@@ -26,6 +34,7 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
     public GameObjectEvent OnSelectTarget;
     public UnityEvent OnNoTargets;
     public UnityEvent OnDie;
+    public FloatEvent OnHit;
 
 
     // Start is called before the first frame update
@@ -37,6 +46,8 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
             OnNoTargets = new UnityEvent();
         if (OnDie == null)
             OnDie = new UnityEvent();
+        if (OnHit == null)
+            OnHit = new FloatEvent();
     }
 
     // Update is called once per frame
@@ -77,7 +88,19 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
     void SelectNewTarget()
     {
         GameObject target = null;
-        foreach(GameObject obj in posibleTargets)
+
+        List<GameObject> l = new List<GameObject>();
+        foreach (GameObject obj in posibleTargets)
+        {
+            if (obj == null)
+                l.Add(obj);
+        }
+        foreach (GameObject obj in l)
+        {
+            posibleTargets.Remove(obj);
+        }
+
+        foreach (GameObject obj in posibleTargets)
         {
             if(target == null || target.transform.position.x < obj.transform.position.x)
             {
@@ -88,7 +111,10 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
         if (currentTarget)
             OnSelectTarget.Invoke(currentTarget);
         else
+        {
+            Debug.Log("No target");
             OnNoTargets.Invoke();
+        }
     }
 
     public void HitSomething(HitType hitType)
@@ -97,6 +123,12 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
         {
             case HitType.perfect:
             case HitType.nonPerfect:
+                if (weapon)
+                {
+                    if(weaponAnim != null)
+                        StopCoroutine(weaponAnim);
+                    weaponAnim = StartCoroutine(ShowWeapon());
+                }
                 currentTarget.GetComponent<HittableInterface>().Hit(hitType);
                 break;
             case HitType.fail:
@@ -107,9 +139,9 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
 
     public void Hit(HitType hitType)
     {
-        life -= damageByMissOrHit;
-
-        if(life <= 0)
+        health -= damageByMissOrHit;
+        OnHit.Invoke(health);
+        if(health <= 0)
         {
             //Si se queda sin vida pierde
             Die();
@@ -122,5 +154,12 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
         posibleTargets.Clear();
         OnNoTargets.Invoke();
         OnDie.Invoke();
+    }
+
+    IEnumerator ShowWeapon()
+    {
+        weapon.SetActive(true);
+        yield return new WaitForSeconds(0.2f);
+        weapon.SetActive(false);
     }
 }
