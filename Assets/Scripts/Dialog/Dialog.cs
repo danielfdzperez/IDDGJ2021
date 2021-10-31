@@ -25,8 +25,9 @@ public class Dialog : MonoBehaviour
     public UnityEvent OnYes;
     public UnityEvent OnNo;
     public UnityEvent OnEnd;
+    public UnityEvent OnStart;
 
-   public bool active = false;
+    public bool active = false;
 
     private void Start()
     {
@@ -39,6 +40,8 @@ public class Dialog : MonoBehaviour
             OnNo = new UnityEvent();
         if (OnEnd == null)
             OnEnd = new UnityEvent();
+        if (OnStart == null)
+            OnStart = new UnityEvent();
     }
     public void Activate()
     {
@@ -48,6 +51,7 @@ public class Dialog : MonoBehaviour
         sentenceIndex = 0;
         DialogManager.instance.DisplayNewDialog(this);
         StartCoroutine(Type());
+        OnStart.Invoke();
     }
 
     IEnumerator Type()
