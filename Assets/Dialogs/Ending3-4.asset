@@ -15,7 +15,9 @@ MonoBehaviour:
   dayArt: {fileID: 0}
   dialogName: Ending3
   hasArt: 0
-  sentences: []
+  sentences:
+  - La incapacidad de Timmy de hacer las tareas lo llevo a una retirada a tiempo.
+    O eso penso el.
   timeToShow: 6
   isEnding: 1
   scoreNeeded: 3

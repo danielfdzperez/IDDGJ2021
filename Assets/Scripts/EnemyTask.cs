@@ -6,6 +6,7 @@ using Sirenix.OdinInspector;
 [CreateAssetMenu(fileName = "New Task", menuName = "Task/Enemy Task")]
 public class EnemyTask : ScriptableObject
 {
+   public  bool completed;
     [HorizontalGroup("Split", Width = 50), HideLabel, PreviewField(50)]
     public Sprite dayArt;
     [HorizontalGroup("Split", Width = 50), HideLabel, PreviewField(50)]
@@ -27,10 +28,26 @@ public class EnemyTask : ScriptableObject
     public string winText;
 
     public AudioClip battleTheme;
+    public AudioClip sfxTalk;
+    public AudioClip sfxHurt;
+    public Sprite fixedArt;
+    public Sprite problemArt;
+
+    [HorizontalGroup("Split", Width = 50), HideLabel, PreviewField(50)]
+    public Sprite defeatedDayArt;
+    [HorizontalGroup("Split", Width = 50), HideLabel, PreviewField(50)]
+    public Sprite defeatedNightArt;
     public Sprite GetSprite(bool night)
     {
         if (night)
             return nightArt;
         return dayArt;
+    }
+
+    public Sprite GetDefeatedSprite(bool night)
+    {
+        if (night)
+            return defeatedNightArt;
+        return defeatedDayArt;
     }
 }

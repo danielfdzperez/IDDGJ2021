@@ -15,7 +15,9 @@ MonoBehaviour:
   dayArt: {fileID: 0}
   dialogName: Ending2
   hasArt: 0
-  sentences: []
+  sentences:
+  - ' Al contrario de lo que penso Timmy, hacer la mitad de las tareas no le salvo
+    de un castigo'
   timeToShow: 6
   isEnding: 1
   scoreNeeded: 2

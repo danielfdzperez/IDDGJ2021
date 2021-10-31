@@ -15,7 +15,9 @@ MonoBehaviour:
   dayArt: {fileID: 0}
   dialogName: Ending4
   hasArt: 0
-  sentences: []
+  sentences:
+  - Tras una noche un tanto extravagante, Timmy se fue a dormir con la consciencia
+    tranquila y el trabajo hecho.
   timeToShow: 6
   isEnding: 1
   scoreNeeded: 4

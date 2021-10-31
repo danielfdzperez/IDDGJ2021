@@ -62,6 +62,12 @@ TextureImporter:
   - first:
       213: 5778961287088506303
     second: FakeWall
+  - first:
+      213: 8758155216525550727
+    second: grandmaFixed
+  - first:
+      213: 6116080786932476827
+    second: dogFixed
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -558,7 +564,7 @@ TextureImporter:
         width: 16
         height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -566,6 +572,48 @@ TextureImporter:
       bones: []
       spriteID: fb505af1caef23050800000000000000
       internalID: 5778961287088506303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grandmaFixed
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 48
+        width: 14
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5258645, y: 0.3949892}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7846db844c73b8970800000000000000
+      internalID: 8758155216525550727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dogFixed
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 63
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ba3b2421fa0e450800000000000000
+      internalID: 6116080786932476827
       vertices: []
       indices: 
       edges: []

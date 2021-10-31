@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02113472e11ace74588a1cdd78cf9dc9, type: 3}
+  m_Name: Dog
+  m_EditorClassIdentifier: 
+  completed: 0
+  dayArt: {fileID: 21300000, guid: 3ea4ffa8f84723541a9d68d192e0d368, type: 3}
+  nightArt: {fileID: 21300000, guid: 4094500225d2cf74b9e9eaa318329e06, type: 3}
+  taskName: 
+  hp: 0
+  text: 'Argos no quiere colaborar '
+  playerActions: []
+  attackDamage: 0
+  attackDescription: 
+  defeatedString: Lo dejo para mas tarde
+  sentences:
+  - Argos vamos a llevarte a parque
+  - le coloco la correa?
+  winText: Argos esta cansado
+  battleTheme: {fileID: 8300000, guid: 133add8aa8498ff48bd2b2df87d7873b, type: 3}
+  sfxTalk: {fileID: 8300000, guid: f7d7b68e46dcd1e41bb2fac1fdf472b2, type: 3}
+  sfxHurt: {fileID: 8300000, guid: c0890cc727e9bf64aaa9ab58cc0ca0f5, type: 3}
+  fixedArt: {fileID: 6116080786932476827, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
+  problemArt: {fileID: 0}
+  defeatedDayArt: {fileID: 0}
+  defeatedNightArt: {fileID: 0}
