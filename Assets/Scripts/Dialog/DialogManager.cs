@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class DialogManager : MonoBehaviour
 {
@@ -35,7 +36,10 @@ public class DialogManager : MonoBehaviour
     {
         //Comprobar que esta todo
 
+        if(!SceneManager.GetActiveScene().name.Equals("BattleTest")) {
+            EndDialog();
 
+        }
     }
 
     public void DisplayNewDialog(Dialog dialog)

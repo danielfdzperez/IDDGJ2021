@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface LogicInterface
 {
-    public void Activate(bool activate);
+     void Activate(bool activate);
 
 }
