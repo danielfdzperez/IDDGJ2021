@@ -15,6 +15,8 @@ public class Dialog : MonoBehaviour
     float speed;
     [SerializeField]
     bool wihtAnswer = false;
+    [SerializeField]
+    bool canBeRepeated = true;
 
 
     [Header("Events")]
@@ -22,6 +24,7 @@ public class Dialog : MonoBehaviour
 
     public UnityEvent OnYes;
     public UnityEvent OnNo;
+    public UnityEvent OnEnd;
 
    public bool active = false;
 
@@ -33,12 +36,15 @@ public class Dialog : MonoBehaviour
             OnYes = new UnityEvent();
         if (OnNo == null)
             OnNo = new UnityEvent();
+        if (OnEnd == null)
+            OnEnd = new UnityEvent();
     }
     public void Activate()
     {
         if (active)
             return;
         active = true;
+        sentenceIndex = 0;
         DialogManager.instance.DisplayNewDialog(this);
         StartCoroutine(Type());
     }
@@ -93,6 +99,9 @@ public class Dialog : MonoBehaviour
     {
         active = false;
         sentenceIndex = 0;
+        OnEnd.Invoke();
+        if(canBeRepeated)
+            active = false;
         DialogManager.instance.EndDialog();
         
     }
@@ -101,5 +110,10 @@ public class Dialog : MonoBehaviour
 
 
         sentences = texts;
+    }
+
+    public void SetSentences(string [] newSentences)
+    {
+        sentences = newSentences;
     }
 }

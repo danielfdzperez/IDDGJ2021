@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Logic1 : MonoBehaviour
+public class Logic1 : MonoBehaviour, LogicInterface
 {
     [SerializeField]
     GameObject proyectilePrefab;
@@ -11,13 +11,15 @@ public class Logic1 : MonoBehaviour
     Transform minPos;
     [SerializeField]
     Transform maxPos;
+
+    Coroutine currentState;
     // Start is called before the first frame update
     void Start()
     {
         if (proyectilePrefab.GetComponent<Projectile>() == null)
             Debug.LogError("La logica del boss no tiene el prefab del proyectil");
 
-        StartCoroutine(State1());
+        //StartCoroutine(State1());
     }
 
     // Update is called once per frame
@@ -62,5 +64,18 @@ public class Logic1 : MonoBehaviour
             yield return new WaitForSeconds(1f);
         }
 
+    }
+
+    public void Activate(bool activate)
+    {
+        if(activate)
+        {
+          currentState =  StartCoroutine(State1());
+        }
+        else
+        {
+            if (currentState != null)
+                StopCoroutine(currentState);
+        }
     }
 }

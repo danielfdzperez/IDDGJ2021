@@ -121,7 +121,6 @@ public partial class AttackBar : MonoBehaviour
     {
         if (!active)
         {
-            Activate();
             return;
         }
 

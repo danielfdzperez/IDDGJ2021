@@ -25,3 +25,5 @@ MonoBehaviour:
   sentences:
   - Jo... se me ha olvidado lavar los platos... mama me va a matar!
   - los lavo ?
+  defeatedString: Paso de limpiar mas platos
+  winText: Mas limpio que yo estan

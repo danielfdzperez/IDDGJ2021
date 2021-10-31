@@ -20,6 +20,7 @@ public class MovementComponent : MonoBehaviour
 
 
     public bool block;
+    public bool canMove = true;
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -35,13 +36,19 @@ public class MovementComponent : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        if (block)
+        if (!canMove)
             return;
         movement = context.ReadValue<Vector2>();
     }
 
-    public void ToggleBlock() {
+    public void StopMovement()
+    {
+        canMove = false;
+        movement = Vector2.zero;
+    }
 
-        block = !block;
+    public void EnableMovement()
+    {
+        canMove = true;
     }
 }
