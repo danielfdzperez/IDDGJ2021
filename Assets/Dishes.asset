@@ -22,3 +22,6 @@ MonoBehaviour:
   attackDamage: 0
   attackDescription: 
   defeatedString: 
+  sentences:
+  - Jo... se me ha olvidado lavar los platos... mama me va a matar!
+  - los lavo ?

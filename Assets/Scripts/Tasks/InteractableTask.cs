@@ -7,11 +7,14 @@ public class InteractableTask : MonoBehaviour
     [SerializeField]
     Canvas canvas;
     // Start is called before the first frame update
+    Dialog currentDialog;
     void Start()
     {
         if (canvas == null)
             Debug.LogError("Task no tiene canvas asociado");
         canvas.enabled = false;
+
+        currentDialog = GetComponent<Dialog>();
     }
 
     // Update is called once per frame
@@ -39,6 +42,8 @@ public class InteractableTask : MonoBehaviour
         GameObject player = collision.gameObject.GetComponent<MovementComponent>() != null ? collision.gameObject : null;
         if (player)
         {
+
+            collision.gameObject.GetComponent<PlayerTaskHandler>().SetCurrentDialog(true, currentDialog);
             ShowCanvas(true);
         }
     }
@@ -49,6 +54,8 @@ public class InteractableTask : MonoBehaviour
 
         if (player)
         {
+
+            collision.gameObject.GetComponent<PlayerTaskHandler>().SetCurrentDialog(false, null);
             ShowCanvas(false);
         }
     }

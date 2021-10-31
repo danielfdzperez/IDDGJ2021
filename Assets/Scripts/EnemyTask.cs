@@ -22,4 +22,6 @@ public class EnemyTask : ScriptableObject
     public string attackDescription;
 
     public string defeatedString;
+
+    public string[] sentences;
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class DialogManager : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class DialogManager : MonoBehaviour
     GameObject dialogObj;
     [SerializeField]
     TextMeshProUGUI text;
+    [SerializeField]
+    GameObject yesnoPrompt;
     [SerializeField]
     GameObject yesButton;
     [SerializeField]
@@ -45,8 +48,12 @@ public class DialogManager : MonoBehaviour
         dialogObj.SetActive(false);
         text.text = "";
         ShowHideYesButton(false);
+        ShowHideYesNoPrompt(false);
         ShowHideNoButton(false);
         ShowHideContinueButton(false);
+
+
+        FindObjectOfType<PlayerTaskHandler>().EnableGameplayControls();
     }
 
     public void SetText(string dialog)
@@ -65,10 +72,24 @@ public class DialogManager : MonoBehaviour
         if(show)
         {
             yesButton.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(yesButton);
         }
         else
         {
             yesButton.SetActive(false);
+        }
+    }
+
+    public void ShowHideYesNoPrompt(bool show)
+    {
+        //Aqui por si se quieren hacer animaciones
+        if (show)
+        {
+            yesnoPrompt.SetActive(true);
+        }
+        else
+        {
+            yesnoPrompt.SetActive(false);
         }
     }
 
@@ -91,6 +112,8 @@ public class DialogManager : MonoBehaviour
         if (show)
         {
             continueButton.SetActive(true);
+            EventSystem.current.SetSelectedGameObject(null);
+            EventSystem.current.SetSelectedGameObject(continueButton);
         }
         else
         {

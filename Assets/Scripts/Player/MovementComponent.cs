@@ -17,6 +17,9 @@ public class MovementComponent : MonoBehaviour
 
     [SerializeField]
     Animator animator;
+
+
+    public bool block;
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
@@ -32,6 +35,13 @@ public class MovementComponent : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
+        if (block)
+            return;
         movement = context.ReadValue<Vector2>();
+    }
+
+    public void ToggleBlock() {
+
+        block = !block;
     }
 }

@@ -4,6 +4,6 @@ using UnityEngine;
 
 public interface HittableInterface
 {
-    public void Hit(HitType hitType);
+     void Hit(HitType hitType);
     
 }

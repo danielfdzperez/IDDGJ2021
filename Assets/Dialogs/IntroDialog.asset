@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c956b33fa2794242953eae4e379e6d3, type: 3}
+  m_Name: IntroDialog
+  m_EditorClassIdentifier: 
+  dayArt: {fileID: 0}
+  dialogName: Intro
+  hasArt: 0
+  sentences:
+  - 'Mama me dejo una nota:'
+  - Hijo tienes que hacer tus tareas deja de estar jugando al League of Legendaries
+  - 'Saca el perro '
+  - Lava los platos
+  - "Arregla el televisor, la abuela parece que lo da\xF1o la noche anterior"
+  - y dale las pastillas a la abuela, sabes que se pone rara si no se las das
+  - Cuando llegue a casa al dia siguiente y no estan las cosas hechas estaras castigado
+    sin jugar juegos!
+  - Besos    Mama
+  timeToShow: 0
+  isEnding: 0
+  scoreNeeded: 0

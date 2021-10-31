@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Dialog : MonoBehaviour
 {
+    [SerializeField]
+    EnemyTask taskDefinition;
 
     [SerializeField]
     string[] sentences;
@@ -21,10 +23,12 @@ public class Dialog : MonoBehaviour
     public UnityEvent OnYes;
     public UnityEvent OnNo;
 
-    bool active = false;
+   public bool active = false;
 
     private void Start()
     {
+        sentences = taskDefinition.sentences;
+
         if (OnYes == null)
             OnYes = new UnityEvent();
         if (OnNo == null)
@@ -48,6 +52,7 @@ public class Dialog : MonoBehaviour
         }
 
         if (! (sentenceIndex < sentences.Length - 1) && wihtAnswer) {
+            DialogManager.instance.ShowHideYesNoPrompt(true);
             DialogManager.instance.ShowHideYesButton(true);
             DialogManager.instance.ShowHideNoButton(true);
         }
@@ -87,6 +92,14 @@ public class Dialog : MonoBehaviour
     void CloseDialog()
     {
         active = false;
+        sentenceIndex = 0;
         DialogManager.instance.EndDialog();
+        
+    }
+
+   public void UpdateSentences(string[] texts) {
+
+
+        sentences = texts;
     }
 }
