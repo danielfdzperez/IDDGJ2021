@@ -30,7 +30,8 @@ public class Dialog : MonoBehaviour
 
     private void Start()
     {
-        sentences = taskDefinition.sentences;
+        if(taskDefinition!=null)
+            sentences = taskDefinition.sentences;
 
         if (OnYes == null)
             OnYes = new UnityEvent();
@@ -104,12 +105,6 @@ public class Dialog : MonoBehaviour
             active = false;
         DialogManager.instance.EndDialog();
         
-    }
-
-   public void UpdateSentences(string[] texts) {
-
-
-        sentences = texts;
     }
 
     public void SetSentences(string [] newSentences)

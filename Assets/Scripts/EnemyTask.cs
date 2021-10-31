@@ -26,6 +26,7 @@ public class EnemyTask : ScriptableObject
     public string[] sentences;
     public string winText;
 
+    public AudioClip battleTheme;
     public Sprite GetSprite(bool night)
     {
         if (night)

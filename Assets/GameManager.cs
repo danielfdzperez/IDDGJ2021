@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
         {
             Instance = this;
+            SoundManager.Instance.PlayHouseMusic();
             DontDestroyOnLoad(this.gameObject);
 
         }

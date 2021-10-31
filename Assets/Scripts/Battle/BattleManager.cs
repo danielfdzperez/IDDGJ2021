@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using TMPro;
 public class BattleManager : MonoBehaviour
 {
@@ -13,6 +14,8 @@ public class BattleManager : MonoBehaviour
     GameObject player;
     [SerializeField]
     GameObject battleMenu;
+    [SerializeField]
+    GameObject attackButton;
     [SerializeField]
     Transform stage1PlayerPos;
     [SerializeField]
@@ -42,6 +45,9 @@ public class BattleManager : MonoBehaviour
         string[] sentenceEnd = { taskConf.defeatedString };
         gameOverDialog.SetSentences(sentenceEnd);
         TimeManagement.Instance.AddAnHour();
+
+        SoundManager.Instance.LoadMusic(TaskManager.Instance.GetCurrentTask().battleTheme);
+        SoundManager.Instance.PlayMusic() ;
     }
 
     private void Start()
@@ -80,6 +86,9 @@ public class BattleManager : MonoBehaviour
     public void InitialDialogEnd()
     {
         battleMenu.SetActive(true);
+
+        EventSystem.current.SetSelectedGameObject(null);
+        EventSystem.current.SetSelectedGameObject(attackButton);
         //Mostrar interfaz de combate
     }
 
@@ -132,6 +141,8 @@ public class BattleManager : MonoBehaviour
                 break;
             case State.attack:
                 battleMenu.SetActive(true);
+                EventSystem.current.SetSelectedGameObject(null);
+                EventSystem.current.SetSelectedGameObject(attackButton);
                 break;
         }
     }
@@ -149,6 +160,7 @@ public class BattleManager : MonoBehaviour
         EnableDisablePlayerMovement(false);
         StopAllCoroutines();
         gameOverDialog.Activate();
+        SoundManager.Instance.PlayHouseMusic();
     }
 
     public void Win()
@@ -160,6 +172,8 @@ public class BattleManager : MonoBehaviour
         string[] sentenceEnd = { taskConf.winText };
         gameOverDialog.SetSentences(sentenceEnd);
         gameOverDialog.Activate();
+
+        SoundManager.Instance.PlayHouseMusic();
     }
 
     IEnumerator WaitUntilBossAttack()

@@ -73,7 +73,7 @@ public class PlayerTaskHandler : MonoBehaviour
 
     public void ActivateDialog(string[] texts)
     {
-        currentDialog.UpdateSentences(texts);
+        currentDialog.SetSentences(texts);
            
                 EnablePauseMenuControls();
                 // movementComponent.ToggleBlock();

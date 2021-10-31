@@ -12,7 +12,8 @@ public class SoundManager : MonoBehaviour
     public AudioSource player;
 
 
-    [SerializeField] AudioClip[] gameOST;
+    [SerializeField] public AudioClip houseTheme;
+    [SerializeField] public AudioClip menuTheme;
     public int playing;
     void Awake()
     {
@@ -112,28 +113,6 @@ public class SoundManager : MonoBehaviour
 
     }
 
-    public void PlayGameMusic(int lvlIndex)
-    {
-
-
-        if (playing != lvlIndex)
-        {
-
-
-            player.volume = volume / 3;
-            player.Stop();
-            int x = lvlIndex;
-            player.clip = gameOST[lvlIndex];
-            playing = lvlIndex;
-            if (musicOn)
-            {
-                player.Play();
-            }
-        }
-
-
-    }
-
 
     public void LoadMusic(AudioClip clip)
     {
@@ -152,9 +131,17 @@ public class SoundManager : MonoBehaviour
 
     }
 
-    public void ResetFromBoss()
+  public void PlayHouseMusic()
     {
-        player.clip = gameOST[0];
+
+        LoadMusic(houseTheme);
         PlayMusic();
     }
+    public void PlayMenuMusic()
+    {
+
+        LoadMusic(menuTheme);
+        PlayMusic();
+    }
+
 }

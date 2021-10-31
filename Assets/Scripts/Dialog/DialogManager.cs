@@ -57,8 +57,10 @@ public class DialogManager : MonoBehaviour
         ShowHideNoButton(false);
         ShowHideContinueButton(false);
 
-
-        FindObjectOfType<PlayerTaskHandler>().EnableGameplayControls();
+        if (!SceneManager.GetActiveScene().name.Equals("BattleTest"))
+        {
+            FindObjectOfType<PlayerTaskHandler>().EnableGameplayControls();
+        }
     }
 
     public void SetText(string dialog)
