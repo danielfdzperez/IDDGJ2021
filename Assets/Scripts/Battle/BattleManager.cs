@@ -46,8 +46,8 @@ public class BattleManager : MonoBehaviour
         gameOverDialog.SetSentences(sentenceEnd);
         TimeManagement.Instance.AddAnHour();
 
-        SoundManager.Instance.LoadMusic(TaskManager.Instance.GetCurrentTask().battleTheme);
-        SoundManager.Instance.PlayMusic() ;
+        //SoundManager.Instance.LoadMusic(TaskManager.Instance.GetCurrentTask().battleTheme);
+        //SoundManager.Instance.PlayMusic() ;
     }
 
     private void Start()
