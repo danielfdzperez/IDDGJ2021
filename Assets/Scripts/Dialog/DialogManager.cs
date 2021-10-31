@@ -131,6 +131,10 @@ public class DialogManager : MonoBehaviour
     public void OnYes()
     {
         currentDialog.Answer(true);
+
+        TaskManager.Instance.SetCurrentTask(currentDialog.taskDefinition);
+
+        SceneManager.LoadScene("BattleTest");
     }
 
     public void OnFalse()

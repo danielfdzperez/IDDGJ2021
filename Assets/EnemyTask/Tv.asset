@@ -22,7 +22,9 @@ MonoBehaviour:
   attackDamage: 0
   attackDescription: 
   defeatedString: Lo dejo para mas tarde
-  sentences: []
+  sentences:
+  - la tele esta rara
+  - intento repararla?
   winText: Ya la abuela podra ver caso cerrado
   battleTheme: {fileID: 8300000, guid: 3473bd77a7e1ae647af6189061b4b6e2, type: 3}
   sfxTalk: {fileID: 8300000, guid: 77192a609ce439644a41c59024636daa, type: 3}
