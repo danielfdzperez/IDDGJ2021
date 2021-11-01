@@ -13,6 +13,9 @@ public class Boss : MonoBehaviour, HittableInterface
     [Range(0, 1)]
     float damageByNonPerfectHit;
 
+    [SerializeField]
+    LogicBase[] logics;
+
     float currentLife = 1;
 
     [System.Serializable]
@@ -58,5 +61,10 @@ public class Boss : MonoBehaviour, HittableInterface
     void Die()
     {
         OnDie.Invoke();
+    }
+
+    public LogicBase GetRandomLogic()
+    {
+        return logics[Random.Range(0, logics.Length)];
     }
 }
