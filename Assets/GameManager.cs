@@ -39,9 +39,15 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(StartDelay());
+    }
+
+    IEnumerator StartDelay()
+    {
+        yield return new WaitForSeconds(1);
         if (!SceneManager.GetActiveScene().name.Equals("Ending"))
         {
-          
+
             foreach (SimpleDialog dialog in AlwaysExpandedTable)
             {
                 if (dialog.timeToShow == TimeManagement.Instance.currentTime)
