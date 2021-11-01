@@ -17,7 +17,7 @@ MonoBehaviour:
   nightArt: {fileID: 21300000, guid: 7dd435d9e9ef70246a9e13e2a8a70363, type: 3}
   taskName: Abuela Eustaquia
   hp: 0
-  text: 
+  text: Hay que darle las pastillas!!
   playerActions: []
   attackDamage: 0
   attackDescription: 

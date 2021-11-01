@@ -65,6 +65,8 @@ public class Boss : MonoBehaviour, HittableInterface
 
     public LogicBase GetRandomLogic()
     {
-        return logics[Random.Range(0, logics.Length)];
+        int i = Random.Range(0, logics.Length);
+        Debug.Log(i);
+        return logics[i];
     }
 }
