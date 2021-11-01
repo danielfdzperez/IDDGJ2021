@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using TMPro;
+using UnityEngine.Events;
+
 public class BattleManager : MonoBehaviour
 {
-    enum State { attack, preDefend,deffend, wait};
+    enum State { attack, preDefend,deffend, wait, waitAttack};
     [SerializeField]
     Dialog initialDialog;
     [SerializeField]
@@ -29,11 +31,14 @@ public class BattleManager : MonoBehaviour
     GameObject boss;
     [SerializeField]
     SpriteRenderer bossSprite;
-    LogicInterface bossLogic;
+    LogicBase bossLogic;
 
     State currentSate = State.attack;
     Vector2 currentPlayerPosTarget;
     bool movePlayer = false;
+    bool gameFinished = false;
+
+    public UnityEvent OnEndGame;
     private void Awake()
     {
         EnableDisablePlayerMovement(false);
@@ -52,13 +57,19 @@ public class BattleManager : MonoBehaviour
 
     private void Start()
     {
+ 
+
+        if (OnEndGame == null)
+            OnEndGame = new UnityEvent();
         textTut = tutorialTexto.GetComponent<TextMeshProUGUI>();
-        bossLogic = boss.GetComponent<LogicInterface>();
+        bossLogic = boss.GetComponent<Boss>().GetRandomLogic();
         initialDialog.Activate();
     }
 
     private void Update()
     {
+        if (gameFinished)
+            return;
         if (movePlayer)
         {
             player.transform.position = Vector2.MoveTowards(player.transform.position, currentPlayerPosTarget, Time.deltaTime * 5);
@@ -76,9 +87,10 @@ public class BattleManager : MonoBehaviour
                 }
                 if(currentSate == State.wait)
                 {
+                    ChangeState(State.waitAttack);
 
-                    ChangeState(State.attack);
                 }
+
             }
         }
     }
@@ -99,13 +111,16 @@ public class BattleManager : MonoBehaviour
 
     public void Attack()
     {
-        battleMenu.SetActive(false);
-        currentPlayerPosTarget = stage1PlayerPos.position;
-        movePlayer = true;
+        if (gameFinished)
+            return;
+
+        ChangeState(State.attack);
     }
 
     public void PlayerHit(HitType type)
     {
+        if (gameFinished)
+            return;
         tutorialTexto.SetActive(false);
 
         if (State.attack == currentSate)
@@ -120,6 +135,8 @@ public class BattleManager : MonoBehaviour
 
     void ChangeState(State newState)
     {
+        if (gameFinished)
+            return;
         currentSate = newState;
         switch(currentSate)
         {
@@ -135,11 +152,18 @@ public class BattleManager : MonoBehaviour
                 EnableDisablePlayerMovement(true);
                 break;
             case State.wait:
+                textTut.text = "";
                 currentPlayerPosTarget = waitPlayerPos.position;
                 movePlayer = true;
                 EnableDisablePlayerMovement(false);
                 break;
             case State.attack:
+                battleMenu.SetActive(false);
+
+                currentPlayerPosTarget = stage1PlayerPos.position;
+                movePlayer = true;
+                break;
+            case State.waitAttack:
                 battleMenu.SetActive(true);
                 EventSystem.current.SetSelectedGameObject(null);
                 EventSystem.current.SetSelectedGameObject(attackButton);
@@ -157,14 +181,17 @@ public class BattleManager : MonoBehaviour
 
     public void GameOver()
     {
+        OnEndGame.Invoke();
         EnableDisablePlayerMovement(false);
         StopAllCoroutines();
         gameOverDialog.Activate();
         SoundManager.Instance.PlayHouseMusic();
+        gameFinished = true;
     }
 
     public void Win()
     {
+        OnEndGame.Invoke();
         EnableDisablePlayerMovement(false);
         StopAllCoroutines();
 
@@ -174,6 +201,7 @@ public class BattleManager : MonoBehaviour
         gameOverDialog.Activate();
 
         SoundManager.Instance.PlayHouseMusic();
+        gameFinished = true;
     }
 
     IEnumerator WaitUntilBossAttack()

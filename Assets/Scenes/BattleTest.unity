@@ -1710,7 +1710,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &449904861
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3221,6 +3221,7 @@ GameObject:
   - component: {fileID: 686460554}
   - component: {fileID: 686460557}
   - component: {fileID: 686460558}
+  - component: {fileID: 686460559}
   m_Layer: 0
   m_Name: EnemyInterface
   m_TagString: Untagged
@@ -3275,8 +3276,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f840da8e713267469caf3436592239c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageByPerfetHit: 0.091
-  damageByNonPerfectHit: 0.398
+  damageByPerfetHit: 0.3
+  damageByNonPerfectHit: 0.1
+  logics:
+  - {fileID: 686460554}
   OnHit:
     m_PersistentCalls:
       m_Calls:
@@ -3296,6 +3299,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: SFX, Assembly-CSharp
         m_MethodName: BossHit
         m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 686460559}
+        m_TargetAssemblyTypeName: Logic2, Assembly-CSharp
+        m_MethodName: BossHit
+        m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3454,6 +3469,23 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &686460559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 686460552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dadd8ea0b9559f4ead33c6391dd0de4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  proyectilePrefab: {fileID: 4842000989179983091, guid: e4de4cf096d91c24f863fe30d2421ff2, type: 3}
+  minPos: {fileID: 708493824}
+  maxPos: {fileID: 329930728}
+  player: {fileID: 9185305931749713194}
+  shotAudio: {fileID: 686460558}
 --- !u!1 &686518740
 GameObject:
   m_ObjectHideFlags: 0
@@ -4808,6 +4840,21 @@ MonoBehaviour:
   tutorialTexto: {fileID: 2070571201}
   boss: {fileID: 686460552}
   bossSprite: {fileID: 945135942}
+  OnEndGame:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9185305931749713195}
+        m_TargetAssemblyTypeName: PlayerCombat, Assembly-CSharp
+        m_MethodName: EndGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!4 &954588239
 Transform:
   m_ObjectHideFlags: 0
@@ -4840,7 +4887,7 @@ MonoBehaviour:
   taskDefinition: {fileID: 0}
   sentences:
   - Prueba
-  speed: 0.001
+  speed: 0.01
   wihtAnswer: 0
   canBeRepeated: 0
   OnYes:
@@ -4894,7 +4941,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   taskDefinition: {fileID: 0}
   sentences: []
-  speed: 0.1
+  speed: 0.01
   wihtAnswer: 0
   canBeRepeated: 0
   OnYes:
@@ -7131,6 +7178,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damageByPerfetHit: 0.091
   damageByNonPerfectHit: 0.398
+  logics: []
   OnHit:
     m_PersistentCalls:
       m_Calls: []

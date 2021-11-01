@@ -27,7 +27,7 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
     public class FloatEvent : UnityEvent<float> { }
 
 
-
+    bool gameFinished = false;
     [Header("Events")]
     [Space]
 
@@ -139,6 +139,8 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
 
     public void Hit(HitType hitType)
     {
+        if (gameFinished)
+            return;
         health -= damageByMissOrHit;
         OnHit.Invoke(health);
         if(health <= 0)
@@ -154,6 +156,11 @@ public class PlayerCombat : MonoBehaviour, HittableInterface
         posibleTargets.Clear();
         OnNoTargets.Invoke();
         OnDie.Invoke();
+    }
+
+    public void EndGame()
+    {
+        gameFinished = true;
     }
 
     IEnumerator ShowWeapon()

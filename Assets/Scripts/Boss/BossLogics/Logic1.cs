@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Logic1 : MonoBehaviour, LogicInterface
+public class Logic1 : LogicBase
 {
     [SerializeField]
     GameObject proyectilePrefab;
@@ -43,7 +43,7 @@ public class Logic1 : MonoBehaviour, LogicInterface
                 //Debug.Log(projecitle.GetComponent<Projectile>());
                 //projecitle.GetComponent<Projectile>().SetDirectionAndSpeed(direction, 5);
                 Projectile p = projecitle.GetComponent<Projectile>();
-                p.SetDirectionAndSpeed(Vector2.right * -1, 5);
+                p.SetDirectionAndSpeed(Vector2.right * -1, 10);
                 p.bossPosition = transform.position;
                 
             }
@@ -60,17 +60,17 @@ public class Logic1 : MonoBehaviour, LogicInterface
                 //Vector2 dir = ((Vector2)transform.position - pos) * -1;
                 Vector2 dir = (pos - (Vector2)transform.position);
                 Projectile p = projecitle.GetComponent<Projectile>();
-                p.SetDirectionAndSpeed(dir, 5);
+                p.SetDirectionAndSpeed(dir, 10);
                 p.bossPosition = transform.position;
                 SoundManager.Instance.PlaySFX(shotAudio);
-                yield return new WaitForSeconds(0.2f);
+                yield return new WaitForSeconds(0.05f);
             }
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
         }
 
     }
 
-    public void Activate(bool activate)
+    public override void Activate(bool activate)
     {
         if(activate)
         {
