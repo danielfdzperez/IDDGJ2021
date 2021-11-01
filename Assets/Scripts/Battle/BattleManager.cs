@@ -29,6 +29,9 @@ public class BattleManager : MonoBehaviour
     GameObject boss;
     [SerializeField]
     SpriteRenderer bossSprite;
+
+    [SerializeField]
+    TextMeshProUGUI bossName;
     LogicInterface bossLogic;
 
     State currentSate = State.attack;
@@ -40,6 +43,7 @@ public class BattleManager : MonoBehaviour
 
         EnemyTask taskConf = TaskManager.Instance.GetCurrentTask();
         bossSprite.sprite = taskConf.GetSprite(TimeManagement.Instance.isNight());
+        bossName.text = taskConf.taskName;
         string[] sentence = { taskConf.text };
         initialDialog.SetSentences(sentence);
         string[] sentenceEnd = { taskConf.defeatedString };
@@ -172,8 +176,9 @@ public class BattleManager : MonoBehaviour
         string[] sentenceEnd = { taskConf.winText };
         gameOverDialog.SetSentences(sentenceEnd);
         gameOverDialog.Activate();
-
+        taskConf.completed = true;
         SoundManager.Instance.PlayHouseMusic();
+        GameManager.Instance.AddScore();
     }
 
     IEnumerator WaitUntilBossAttack()

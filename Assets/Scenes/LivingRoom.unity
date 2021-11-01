@@ -1482,6 +1482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1087056781}
+  mark: {fileID: 527592566}
+  taskSprite: {fileID: 1152525186}
 --- !u!61 &1118716067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4496,6 +4498,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1413062290}
+  mark: {fileID: 316239678}
+  taskSprite: {fileID: 2060413545}
 --- !u!61 &1889308495
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4785,6 +4789,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 455671371}
+  mark: {fileID: 770803688}
+  taskSprite: {fileID: 2020546489}
 --- !u!61 &2009501228
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4912,6 +4918,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5237293820748677370, guid: f62d0e0faf0ab2c4e921d093fc280860, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5237293821587155360, guid: f62d0e0faf0ab2c4e921d093fc280860, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -4993,6 +5003,11 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!212 &2020546489 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5237293820748677373, guid: f62d0e0faf0ab2c4e921d093fc280860, type: 3}
+  m_PrefabInstance: {fileID: 2020546486}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2038018435
 GameObject:
   m_ObjectHideFlags: 0
@@ -5733,6 +5748,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 7467636829831099116}
+  mark: {fileID: 242622857}
+  taskSprite: {fileID: 477325338}
 --- !u!114 &7467636829709477232
 MonoBehaviour:
   m_ObjectHideFlags: 0

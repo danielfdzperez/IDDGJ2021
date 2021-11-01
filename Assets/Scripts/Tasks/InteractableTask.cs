@@ -8,6 +8,15 @@ public class InteractableTask : MonoBehaviour
     Canvas canvas;
     // Start is called before the first frame update
     Dialog currentDialog;
+
+
+    [SerializeField]
+    GameObject mark;
+
+    [SerializeField]
+    SpriteRenderer taskSprite;
+
+    bool completed;
     void Start()
     {
         if (canvas == null)
@@ -15,13 +24,18 @@ public class InteractableTask : MonoBehaviour
         canvas.enabled = false;
 
         currentDialog = GetComponent<Dialog>();
+
+        EnemyTask enemytask = GetComponent<Dialog>().taskDefinition;
+
+        if (enemytask.completed)
+        {
+            taskSprite.sprite = enemytask.fixedArt;
+            mark.SetActive(false);
+            completed = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+  
 
     private void ShowCanvas(bool show)
     {
@@ -40,7 +54,7 @@ public class InteractableTask : MonoBehaviour
     {
         
         GameObject player = collision.gameObject.GetComponent<MovementComponent>() != null ? collision.gameObject : null;
-        if (player)
+        if (player && !completed)
         {
 
             collision.gameObject.GetComponent<PlayerTaskHandler>().SetCurrentDialog(true, currentDialog);
@@ -52,7 +66,7 @@ public class InteractableTask : MonoBehaviour
     {
         GameObject player = collision.gameObject.GetComponent<MovementComponent>() != null ? collision.gameObject : null;
 
-        if (player)
+        if (player && !completed)
         {
 
             collision.gameObject.GetComponent<PlayerTaskHandler>().SetCurrentDialog(false, null);

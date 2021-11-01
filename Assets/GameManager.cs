@@ -10,6 +10,11 @@ public class GameManager : MonoBehaviour
 
     [TableList(AlwaysExpanded = true, DrawScrollView = false)]
     public List<SimpleDialog> AlwaysExpandedTable = new List<SimpleDialog>();
+    public int score;
+
+
+
+    public List<EnemyTask> enemyTaskTable= new List<EnemyTask>();
     void Awake()
     {
 
@@ -17,6 +22,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
             SoundManager.Instance.PlayHouseMusic();
+            resetTasks();
             DontDestroyOnLoad(this.gameObject);
 
         }
@@ -38,6 +44,20 @@ public class GameManager : MonoBehaviour
             }
         }
     }
+    public void AddScore()
+    {
 
+        score++;
+    }
+
+    void resetTasks() {
+
+
+
+        foreach (EnemyTask enemyTask in enemyTaskTable)
+        {
+            enemyTask.completed = false;
+        }
+    }
 }
 

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02113472e11ace74588a1cdd78cf9dc9, type: 3}
   m_Name: Grandma
   m_EditorClassIdentifier: 
-  completed: 0
+  completed: 1
   dayArt: {fileID: 21300000, guid: 9f0a0999f5e023043a8071f4abef7712, type: 3}
   nightArt: {fileID: 21300000, guid: 7dd435d9e9ef70246a9e13e2a8a70363, type: 3}
-  taskName: Grandma
+  taskName: Abuela Eustaquia
   hp: 0
   text: 
   playerActions: []
@@ -30,7 +30,7 @@ MonoBehaviour:
   battleTheme: {fileID: 8300000, guid: 13e2354aecc5e6348a7bc4064ff430ae, type: 3}
   sfxTalk: {fileID: 8300000, guid: 1d03c975afbf609409fcb6db373404ae, type: 3}
   sfxHurt: {fileID: 8300000, guid: f6df24e6c776a7446a0344488674e505, type: 3}
-  fixedArt: {fileID: 0}
+  fixedArt: {fileID: 8758155216525550727, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
   problemArt: {fileID: 7477116942032994148, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
   defeatedDayArt: {fileID: 21300000, guid: df09bda4eaed4194eb00859ce3a9a70a, type: 3}
   defeatedNightArt: {fileID: 21300000, guid: df09bda4eaed4194eb00859ce3a9a70a, type: 3}

@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02113472e11ace74588a1cdd78cf9dc9, type: 3}
   m_Name: Dog
   m_EditorClassIdentifier: 
-  completed: 0
+  completed: 1
   dayArt: {fileID: 21300000, guid: 3ea4ffa8f84723541a9d68d192e0d368, type: 3}
   nightArt: {fileID: 21300000, guid: 4094500225d2cf74b9e9eaa318329e06, type: 3}
-  taskName: 
+  taskName: Argos el perro flojo
   hp: 0
   text: 'Argos no quiere colaborar '
   playerActions: []

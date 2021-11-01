@@ -1063,10 +1063,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ganas
+  m_text: Tus Ganas de hacer la tarea
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b91d41af102607341bfe35eb7e9d191e, type: 2}
-  m_sharedMaterial: {fileID: 1460850787704039019, guid: b91d41af102607341bfe35eb7e9d191e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e23233e22ba48541bad128c24c0b782, type: 2}
+  m_sharedMaterial: {fileID: 7967650402754465478, guid: 5e23233e22ba48541bad128c24c0b782, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1090,10 +1090,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 15.3
+  m_fontSize: 13.1
   m_fontSizeBase: 13.1
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 1
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1126,7 +1126,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 56.234447, y: 0, z: 57.557613, w: 32.7483}
+  m_margin: {x: -0.7798462, y: 0, z: -3.6458473, w: 32.7483}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2255,10 +2255,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Platos '
+  m_text: Nombre largro para test
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b91d41af102607341bfe35eb7e9d191e, type: 2}
-  m_sharedMaterial: {fileID: 1460850787704039019, guid: b91d41af102607341bfe35eb7e9d191e, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 5e23233e22ba48541bad128c24c0b782, type: 2}
+  m_sharedMaterial: {fileID: 7967650402754465478, guid: 5e23233e22ba48541bad128c24c0b782, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2282,7 +2282,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14.05
+  m_fontSize: 13.8
   m_fontSizeBase: 13.1
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2318,7 +2318,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 56.234447, y: 0, z: 57.557613, w: 32.7483}
+  m_margin: {x: -4.2984123, y: 0, z: -1.0836219, w: 32.7483}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4612,6 +4612,7 @@ MonoBehaviour:
   tutorialTexto: {fileID: 2070571201}
   boss: {fileID: 686460552}
   bossSprite: {fileID: 945135942}
+  bossName: {fileID: 641470223}
 --- !u!4 &954588239
 Transform:
   m_ObjectHideFlags: 0

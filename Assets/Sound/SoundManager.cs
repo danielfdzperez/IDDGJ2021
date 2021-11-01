@@ -11,7 +11,6 @@ public class SoundManager : MonoBehaviour
 
     public AudioSource player;
 
-
     [SerializeField] public AudioClip houseTheme;
     [SerializeField] public AudioClip menuTheme;
     public int playing;
@@ -143,5 +142,8 @@ public class SoundManager : MonoBehaviour
         LoadMusic(menuTheme);
         PlayMusic();
     }
+
+
+  
 
 }

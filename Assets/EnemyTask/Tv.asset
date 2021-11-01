@@ -15,7 +15,7 @@ MonoBehaviour:
   completed: 0
   dayArt: {fileID: 21300000, guid: 258701781ded9fe48aa727b1a3f34b00, type: 3}
   nightArt: {fileID: 21300000, guid: d6c379daa634ca7418b19a2b98815596, type: 3}
-  taskName: 
+  taskName: TV PG poltergeist
   hp: 0
   text: Algo raro pasa con la tele
   playerActions: []
