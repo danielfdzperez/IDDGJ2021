@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: d0b68f0a763bd84479bfca5e1b431a0a
+  - enabled: 1
     path: Assets/Scenes/HouseTest.unity
     guid: 63ab6c674b44fc34a81b513008d0b516
   - enabled: 1
@@ -17,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BattleTest.unity
     guid: 45e1047b1562fc343a771665342f382d
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 111bd72c2255ab948b79b83f8d365c85
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f58a877d917e8a849ae18cd312b24181, type: 2}

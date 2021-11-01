@@ -7,10 +7,12 @@ public class SwitchScene : MonoBehaviour
 {
     [SerializeField]
     string sceneToLoad;
-
+    [SerializeField]
+    bool isEnding;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Switch();
+        if(!isEnding)
+            Switch();
         
     }
 

@@ -150,7 +150,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &239920114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -470,7 +470,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 20
   m_Sprite: {fileID: 11442893378838041, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1053,6 +1053,10 @@ PrefabInstance:
       propertyPath: playerInput
       value: 
       objectReference: {fileID: 1794253108}
+    - target: {fileID: 639616197, guid: 03bf74c95d7f17a4782d185d738668f1, type: 3}
+      propertyPath: currentDialog
+      value: 
+      objectReference: {fileID: 1679320515783993476}
     - target: {fileID: 3507930813390752979, guid: 03bf74c95d7f17a4782d185d738668f1, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1125,6 +1129,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edaec1904ac4b2e428b1f5673147615a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &653360139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 653360141}
+  - component: {fileID: 653360140}
+  m_Layer: 0
+  m_Name: LivingRoomHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &653360140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653360139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 518244d9711a8f1468a60de47a60b78e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &653360141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 653360139}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1091.5675, y: 637.82935, z: -15.963973}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 21
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &689884632
 GameObject:
   m_ObjectHideFlags: 0
@@ -1601,6 +1648,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStart:
     m_PersistentCalls:
       m_Calls: []
   active: 0
@@ -3562,7 +3612,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 20
   m_Sprite: {fileID: 11442893378838041, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4351,7 +4401,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 20
   m_Sprite: {fileID: 11442893378838041, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4453,7 +4503,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 20
   m_Sprite: {fileID: 11442893378838041, guid: 9257be0fb8e8e5d46948cb059dca5866, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -4617,6 +4667,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStart:
     m_PersistentCalls:
       m_Calls: []
   active: 0
@@ -4910,6 +4963,9 @@ MonoBehaviour:
   OnEnd:
     m_PersistentCalls:
       m_Calls: []
+  OnStart:
+    m_PersistentCalls:
+      m_Calls: []
   active: 0
 --- !u!1001 &2020546486
 PrefabInstance:
@@ -5105,6 +5161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneToLoad: HouseTest
+  isEnding: 0
 --- !u!61 &2038018439
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5353,8 +5410,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: NonTaskUI
       objectReference: {fileID: 0}
+    - target: {fileID: 2421626748610318913, guid: 076704d66bd258d478179c4b1de68e13, type: 3}
+      propertyPath: wihtAnswer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2421626748610318913, guid: 076704d66bd258d478179c4b1de68e13, type: 3}
+      propertyPath: canBeRepeated
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 076704d66bd258d478179c4b1de68e13, type: 3}
+--- !u!114 &1679320515783993476 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2421626748610318913, guid: 076704d66bd258d478179c4b1de68e13, type: 3}
+  m_PrefabInstance: {fileID: 1679320515783993475}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1685450203ece0e4489506793072caa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1828447962673897349 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1013827376471242502, guid: 076704d66bd258d478179c4b1de68e13, type: 3}
@@ -5774,6 +5850,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   OnEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  OnStart:
     m_PersistentCalls:
       m_Calls: []
   active: 0

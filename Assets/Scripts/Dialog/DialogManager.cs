@@ -36,7 +36,7 @@ public class DialogManager : MonoBehaviour
     {
         //Comprobar que esta todo
 
-        if(!SceneManager.GetActiveScene().name.Equals("BattleTest")) {
+        if(!SceneManager.GetActiveScene().name.Equals("BattleTest") && !SceneManager.GetActiveScene().name.Equals("Ending")) {
             EndDialog();
 
         }
@@ -47,6 +47,7 @@ public class DialogManager : MonoBehaviour
         currentDialog = dialog;
         dialogObj.SetActive(true);
     }
+
 
     public void EndDialog()
     {

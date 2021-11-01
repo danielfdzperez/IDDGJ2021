@@ -22,6 +22,7 @@ public class TimeManagement : MonoBehaviour
             arrowAngles.Add(0f);
             arrowAngles.Add(-58f);
             arrowAngles.Add(-108.3f);
+            NewGame();
             DontDestroyOnLoad(this.gameObject);
 
         }
@@ -36,8 +37,10 @@ public class TimeManagement : MonoBehaviour
 
     public void UpdateClock(RectTransform arrow)
     {
-
-        arrow.rotation = Quaternion.Euler(0f, 0f, arrowAngles[currentTime]);
+        if(currentTime>=6)
+            arrow.rotation = Quaternion.Euler(0f, 0f, arrowAngles[0]);
+        else
+            arrow.rotation = Quaternion.Euler(0f, 0f, arrowAngles[currentTime]);
     }
 
     public bool isNight() {
@@ -49,5 +52,10 @@ public class TimeManagement : MonoBehaviour
     {
         currentTime++;
         currentTime = Mathf.Min(arrowAngles.Count, currentTime);
+    }
+
+    public void NewGame() {
+
+        currentTime = 0;
     }
 }

@@ -34,7 +34,7 @@ public class BattleManager : MonoBehaviour
 
     [SerializeField]
     TextMeshProUGUI bossName;
-    LogicInterface bossLogic;
+    LogicBase bossLogic;
 
     State currentSate = State.attack;
     Vector2 currentPlayerPosTarget;
@@ -203,7 +203,10 @@ public class BattleManager : MonoBehaviour
         string[] sentenceEnd = { taskConf.winText };
         gameOverDialog.SetSentences(sentenceEnd);
         gameOverDialog.Activate();
-        taskConf.completed = true;
+
+
+        //taskConf.completed = true;
+        PlayerPrefs.SetInt(taskConf.taskName, 1);
         SoundManager.Instance.PlayHouseMusic();
         GameManager.Instance.AddScore();
         gameFinished = true;

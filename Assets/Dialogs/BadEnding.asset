@@ -15,7 +15,8 @@ MonoBehaviour:
   dayArt: {fileID: 0}
   dialogName: BadEnding
   hasArt: 0
-  sentences: []
+  sentences:
+  - ' El castigo que recibio Timmy esa noche sera recordado por siglos.'
   timeToShow: 6
   isEnding: 1
-  scoreNeeded: -1
+  scoreNeeded: 0

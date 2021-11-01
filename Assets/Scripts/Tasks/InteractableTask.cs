@@ -26,8 +26,8 @@ public class InteractableTask : MonoBehaviour
         currentDialog = GetComponent<Dialog>();
 
         EnemyTask enemytask = GetComponent<Dialog>().taskDefinition;
-
-        if (enemytask.completed)
+        
+        if (PlayerPrefs.GetInt(enemytask.taskName, 0)==1)
         {
             taskSprite.sprite = enemytask.fixedArt;
             mark.SetActive(false);
